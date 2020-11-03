@@ -56,6 +56,26 @@
                 Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density.
                 Enterprises use Docker to build agile software delivery pipelines to ship new features faster,
                     more securely and with confidence for both Linux and Windows Server apps</p>
+               <h5>Docker Terminology</h5>
+                <p> Images
+                A docker images is the "cooking recipe" for a container. It contains all the definitions how to boot up
+                    the linux environment. Typically one Docker image is there to fulfill specifically one task.
+                    For instance one image would define your webserver and another image would define the underlying database.</p>
+
+               <h5> Containers</h5>
+              <p>  Containers are the instantiations of images. They are one form of the image. Compare it to object oriented programming, then your class would be an image and instance of the class a container. Another comparison would be to real containers on ship. They have a unidbody from the outside, but can look very different from the inside. Some interesting facts about containers:
+
+                containers are not persistent. As soon as you don't use them anymore they get stoped (or even deleted)
+                a container only lives for the time a process runs inside it which does not get killed (of course you could run processess which never send an exit command)
+                containers can include data however it's also not persistent. If you want to make it persistent, you can use volumes.
+                to communicate between containers, use the same protocolls as you would use to communicate between computers (e.g. tcp/ip)
+              </p>
+
+                <h5>Networks</h5>
+                <p>Docker comes with its own networking capabilities. The name of a container is its hostname.
+                    The easiest way to try this is to have two containers running and ping one container from inside the
+                    other container. Docker Compose will raise its own subnet.</p>
+
                <p>
                 <h5> Docker Repository</h5>
                 <div class="media">
@@ -97,6 +117,7 @@
              <p> The Apache HTTP Server, colloquially called Apache, is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation.
 
                  The vast majority of Apache HTTP Server instances run on a Linux distribution, but current versions also run on Microsoft Windows, OpenVMS, and a wide variety of Unix-like systems. Past versions also ran on NetWare, OS/2 and other operating systems,[9] including ports to mainframes.[10]</p>
+
             </div>
         </div>
 
