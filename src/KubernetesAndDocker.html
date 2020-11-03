@@ -41,18 +41,55 @@
             </ul>
         </div>
     </nav>
-
+    <div class="media">
+        <img src="../images/Cloud_computing..png" class="img-thumbnail" style="margin: 20px; margin-top: 20px" alt="..." width="300" height="300">
+        <div class="media-body" style="line-height: 2">
     <div class="row" style="margin-top: 30px">
         <div class="col-8">
-            <h1>Cloud Technology</h1>
+            <h1>Kubernetes vs Docker</h1>
             <div class="bodyContent">
-
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h5>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p> Docker is an open source standalone application which works as an engine used to run containerized applications.
+                It is installed on your operating system (OS), preferably on Linux, but can be also installed on Windows and macOS,
+                which in turn runs on a physical or virtual machine. An application running in a container is isolated from the
+                rest of the system and from other containers, but gives the illusion of running in its own OS instance.
+                Multiple Docker containers can be run on the single operating system simultaneously; you can manage those
+                containers with Docker, and Docker can run without Kubernetes. If you have multiple hosts for running containers,
+                managing them manually can be difficult, and it is generally better to select a centralized management tool
+                or an orchestration solution.
+                Docker Compose is a basic container orchestration tool used for running multi-container Docker applications.
+                You can configure one YAML (yml) Docker Compose configuration file to define multi-container applications instead
+                of configuring manually separate Dockerfiles for each container. After configuring the single YAML file, you can run
+                all needed containers with a single command in your Linux console. Using Docker Compose is one way to orchestrate your
+                Docker containers, but there is a powerful alternative to Docker Compose available that is called Kubernetes.
+            </p>
+            <p>What Is Kubernetes?
+                Kubernetes is an open source container orchestration solution that is used for managing containerized software and
+                services with a high degree of automation. Kubernetes is a Google project intended to automate deployment,
+                scaling and availability of applications running in containers. You can increase the number of hosts running containers
+                up to 11 or more hosts. Moreover, you can create a cluster of Docker containers with Kubernetes in order to ensure
+                high availability and load balancing. Hosts that are used in a cluster are called nodes. The architecture type of
+                Kubernetes is master-slave — the cluster consists of master nodes and working nodes. The minimum recommended number
+                of nodes required by Kubernetes is four. While you can build a cluster with one machine, in order to run all the examples
+                and tests you need at least four nodes. A Kubernetes cluster that handles production traffic should have a minimum of
+                three working nodes. Using two master nodes protects
+                your cluster against failure of one master node. You can use more than two master nodes if needed.</p>
+          <h5> Kubernetes vs Docker: Networking </h5>
+                <p> Docker provides three network modes for network communication between containers.
                 </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
+            <b> Bridge.</b>
+                <p> This mode is used by default, creating a virtual layer-3 bridge. The network name on your host is docker for this network.
+                    Docker automatically creates a layer-3 network bridge and configures masquerading rules for the external network
+                    interface, using the network address translation (NAT) principle, which allows containers to communicate with each
+                    other and connect to external networks. You can configure port forwarding for the network interface of the host machine
+                    if you would like to connect to a container from other hosts and external networks. Thus, by connecting to the appropriate
+                    port of the host machine you are forwarded to the necessary port of the Docker container.
+                    You can create more than one network interface for a Docker container if need be.</p>
+                <b> Host.</b>
+                <p> Host. In this mode a host network driver ensures that a container is not isolated from the Docker host. The container shares the host network stack, and the container’s host name is the same as the host name of the host operating system. If you run a container on which a TCP port 8080 is listened, the container application is available on the TCP port 8080
+                    of the host machine’s IP address. The host networking driver is available only for Linux machines.</p>
+                <b> None.</b>
+                <p>  No IP addresses are configured for a given container’s network interface except the 127.0.0.1 address for the loopback interface.
+                    There is no access to external networks if the None network mode is set.</p>
             </div>
         </div>
 
@@ -67,7 +104,8 @@
             </div>
         </div>
     </div>
-
+        </div>
+    </div>
     <footer>
         <div class="alert alert-primary" role="alert" style="margin: 20px">
             <small>&copy; Copyright 2020, Johnny Pillacela, Anxhela Mehmetaj</small>
