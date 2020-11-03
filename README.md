@@ -3,3 +3,4 @@
 ## Link to Website hosted on github pages:
 #### https://web.njit.edu/~am2997/cloud-technology/src/index.html
 
+#### https://anxhelamehmetaj.github.io/cloud-technology-1/src/
